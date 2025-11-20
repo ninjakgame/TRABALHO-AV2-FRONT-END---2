@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTO+</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        fetch('cabecalho.html')
+            .then(response => response.text())
+            .then(html => document.getElementById('cabecalho').innerHTML = html)
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => document.getElementById('footer').innerHTML = html)
+    </script>
+</head>
+
+<body>
+    <div id="cabecalho"></div>
+
+    <div class="container">
+
+        <form action="form-cadastro.html">
+            <h1>CADASTRO DE EVENTOS</h1>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="email@gmail.com">
+
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" required placeholder="senha123">
+
+            <label for="agendar">Agendamento</label>
+            <input type="date" name="agendar" id="agendar" required>
+
+            <button type="submit" class="cadastro" id="cadastro">Cadastrar</button>
+        </form>
+
+    </div>
+
+    <div id="footer"></div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

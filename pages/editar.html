@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Conta</title>
+    <link rel="stylesheet" href="/css/criar.css">
+    <link rel="stylesheet" href="/topo.css">
+    <script>
+        fetch('cabecalho2.html')
+            .then(response => response.text())
+            .then(html => document.getElementById('cabecalho').innerHTML = html)
+
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(html => document.getElementById('footer').innerHTML = html)
+    </script>
+</head>
+
+<body>
+    <div id="cabecalho"></div>
+
+    <div class="cadastroConta">
+        <div class="container">
+            <h2>EDITAR CONTA</h2>
+
+            <form action="/form-cadastro.html" onsubmit="return validarSenha()">
+
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required value="Pedro Gamer2025">
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required value="Gamer@gmail.com">
+
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" required value="Pedro_2025">
+
+                <label for="confirmarSenha">Confirmação da Senha</label>
+                <input type="password" name="confirmarSenha" id="confirmarSenha" required value="Pedro_2025">
+
+                <label for="agenda">Agenda</label>
+                <select name="agenda" id="agenda" required>
+                    <option value="escolha" disabled>Escolha seu Agendamento Aqui</option>
+                    <option value="reuniao" selected>Reuniao</option>
+                    <option value="aula">Aula</option>
+                    <option value="evento">Evento</option>
+                    <option value="outra">Outras Atividades</option>
+                </select>
+
+                <button type="submit">Salvar</button>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="/js/criar.js"></script>
+</body>
+
+</html>

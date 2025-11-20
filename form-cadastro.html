@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal</title>
+    <link rel="stylesheet" href="stylePrincipal.css">
+</head>
+<script>
+    fetch('/pages/cabecalho2.html')
+        .then(response => response.text())
+        .then(html => document.getElementById("cabecalho").innerHTML = html)
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(html => document.getElementById("footer").innerHTML = html)
+</script>
+
+<body>
+    <div id="cabecalho"></div>
+
+    <div class="containerTabela">
+        <div class="nome">
+            <h1 class="nomeTabela">TABELA DE AGENDAMENTO</h1>
+        </div>
+
+        <div class="butao">
+            <button onclick="criar()" id="criar">Criar</button>
+            <button onclick="editar()" id="editar">Editar</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOME</th>
+                    <th>EMAIL</th>
+                    <th>AGENDAMENTO</th>
+                    <th>STATUS</th>
+                    <th>EXCLUIR</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Joao</td>
+                    <td>JoaoPedro@gmail.com</td>
+                    <td>Reunião</td>
+                    <td>
+                        <select>
+                            <option value="agendamento">Agendamento</option>
+                            <option value="na_lista">Na lista</option>
+                            <option value="cancelado">Cancelado</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="excluir">X</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Pedro Fabricio</td>
+                    <td>Pedro12@gmail.com</td>
+                    <td>Aula</td>
+                    <td>
+                        <select>
+                            <option value="agendamento">Agendamento</option>
+                            <option value="na_lista">Na lista</option>
+                            <option value="cancelado">Cancelado</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="excluir">X</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Leandro</td>
+                    <td>Leogamer2025@gmail.com</td>
+                    <td>Evento</td>
+                    <td>
+                        <select>
+                            <option value="agendamento">Agendamento</option>
+                            <option value="na_lista">Na lista</option>
+                            <option value="cancelado">Cancelado</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="excluir">X</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
