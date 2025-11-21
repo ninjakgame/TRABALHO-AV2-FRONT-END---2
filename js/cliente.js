@@ -5,26 +5,6 @@ function validarSenha() {
     const telefoneInput = document.getElementById("telefone");
     const senhaInput = document.getElementById("senha");
 
-    // Função para destacar o campo com foco e borda vermelha
-    function destacarCampo(campo) {
-    campo.focus();
-
-    if (campo.value == "") {
-        campo.classList.add("error"); // Adiciona borda vermelha
-    } else {
-        campo.classList.remove("error"); // Remove assim que o usuário preencher
-    }
-}
-
-document.querySelectorAll("input, select").forEach(campo => {
-    campo.addEventListener("input", () => {
-        if (campo.value !== "") {
-            campo.classList.remove("error");
-        }
-    });
-});
-
-
     if (nomeInput.value === "") {
         alert("Você esqueceu de colocar o seu nome!");
         destacarCampo(nomeInput);
@@ -39,13 +19,13 @@ document.querySelectorAll("input, select").forEach(campo => {
         
         if (cpfInput.value === "") {
             alert("Você esqueceu de colocar o CPF!");
-            destacarCampo(emailInput);
+            destacarCampo(cpfInput);
             return false;
         }
     
         if (telefoneInput.value === "") {
             alert("Você esqueceu de colocar o telefone!");
-            destacarCampo(emailInput);
+            destacarCampo(telefoneInput);
             return false;
         }
 
@@ -54,6 +34,25 @@ document.querySelectorAll("input, select").forEach(campo => {
         destacarCampo(senhaInput);
         return false;
     }
+
+    document.querySelectorAll("input, select").forEach(campo => {
+    campo.addEventListener("input", () => {
+        if (campo.value !== "") {
+            campo.classList.remove("error");
+        }
+    });
+});
+
+        // Função para destacar o campo com foco e borda vermelha
+    function destacarCampo(campo) {
+    campo.focus();
+
+    if (campo.value == "") {
+        campo.classList.add("error"); // Adiciona borda vermelha
+    } else {
+        campo.classList.remove("error"); // Remove assim que o usuário preencher
+    }
+}
 
     alert("Cadastro realizado com sucesso!");
     return true;

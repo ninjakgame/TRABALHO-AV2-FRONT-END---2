@@ -26,29 +26,27 @@
         <form action="/form-cadastro.html">
             <h2>Contato do Cliente</h2>
 
-            <label for="nome">Nome</label>
             <input type="text" name="nome" id="nome" required placeholder="Usuario">
 
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required placeholder="usuario@gmail.com">
+            <input type="email" name="email" id="email" required placeholder="E-mail">
 
-            <label for="cpf">Cpf</label>
-            <input type="text" name="cpf" id="cpf" maxlength="11" required placeholder="123.456.789-01">
+            <input type="password" name="senha" id="senha" required placeholder="Senha">
 
-            <label for="Telefone">Telefone</label>
-            <input type="text" name="telefone" id="telefone" maxlength="11" required placeholder="(85) 991234-5678">
+            <div class="number">
+
+                <input type="text" name="cpf" id="cpf" maxlength="11" required placeholder="CPF">
+
+                <input type="text" name="telefone" id="telefone" maxlength="11" required placeholder="Telefone">
+
+            </div>
 
             <h2>Endereço Completo</h2>
-            <label for="rua">Rua</label>
-            <input type="text" name="rua" id="rua" placeholder="Rua Exemplo">
+            <input type="text" name="rua" id="rua" placeholder="Rua">
 
-            <label for="numero">Número</label>
-            <input type="text" name="numero" id="numero" placeholder="123">
+            <input type="text" name="numero" id="numero" placeholder="Numero do Local">
 
-            <label for="cidade">Cidade</label>
-            <input type="text" name="cidade" id="cidade" placeholder="Exemplo: Fortaleza">
+            <input type="text" name="cidade" id="cidade" placeholder="Cidade">
 
-            <label for="estado">Estado</label>
             <select name="estado" id="estado">
                 <option value="escolha" selected disabled>Escolha o seu Estado</option>
                 <option value="AC">AC</option>
@@ -62,8 +60,7 @@
                 <option value="PR">PR</option>
             </select>
 
-            <label for="cep">Cep</label>
-            <input type="text" name="cep" id="cep" maxlength="8" placeholder="12345-678">
+            <input type="text" name="cep" id="cep" maxlength="8" placeholder="Cep">
 
             <button onclick="validarSenha()">Cadastrar</button>
         </form>

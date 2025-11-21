@@ -59,3 +59,20 @@ button:hover{
     transition: 0.3s ease;
     color: white;
 }
+
+.confirmacaoCheck{
+    display: flex;
+    align-items: right;
+    gap: 10px;
+}
+
+input.error, select.error {
+    border: 2px solid red !important;
+    background-color: #ffe6e6;
+    transition: 0.3s;
+}
+
+.checkErro {
+    color: red !important;  /* texto vermelho */
+}
+

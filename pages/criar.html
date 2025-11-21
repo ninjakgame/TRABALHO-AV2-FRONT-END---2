@@ -41,11 +41,14 @@
                 <label for="agenda">Agenda</label>
                 <select name="agenda" id="agenda" required>
                     <option value="escolha" selected disabled>Escolha seu Agendamento Aqui</option>
-                    <option value="reuniao">Reuniao</option>
+                    <option value="reuniao">Reunião</option>
                     <option value="aula">Aula</option>
                     <option value="evento">Evento</option>
                     <option value="outra">Outras Atividades</option>
                 </select>
+
+                <label for="dataAgendamento">Dia do Agendamento</label>
+                <input type="date" name="dataAgendamento" id="dataAgendamento" required>
 
                 <button type="submit" onclick="return validarSenha()">Criar</button>
             </form>
